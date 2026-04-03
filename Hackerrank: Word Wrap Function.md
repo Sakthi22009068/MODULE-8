@@ -26,9 +26,47 @@ To write a Python function that takes a long string and a specified width, and r
 
 
 ## 🧪 Program
-Add Code Here
+
+
+def wrap(string, max_width):
+
+    wrapped_lines = []
+    
+    # Loop through string in steps of max_width
+    
+    for i in range(0, len(string), max_width):
+    
+        wrapped_lines.append(string[i:i + max_width])
+    
+    # Join with newline character
+    
+    return "\n".join(wrapped_lines)
+
+
+
+text = "ABCDEFGHIJKLIMNOQRSTUVWXYZ"
+
+width = 4
+
+result = wrap(text, width)
+
+print(result)
+
 
 ## Sample Output
+ABCD
+
+EFGH
+
+IJKL
+
+IMNO
+
+QRST
+
+UVWX
+
+YZ
 
 ## Result
-
+The program successfully splits the given string into multiple lines such that each line contains at most the specified width, demonstrating an efficient implementation of a word wrap function using slicing and loops.
