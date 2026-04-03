@@ -28,8 +28,53 @@ To maintain a dictionary of students with their marks in five subjects, calculat
 ---
 
 ## 💻 PROGRAM:
-ADD CODE HERE
+
+student_marks = {
+    "Ravi": [85, 90, 88, 92, 87],
+    
+    "Arun": [78, 82, 80, 79, 81],
+    
+    "Meena": [91, 89, 94, 90, 93],
+    
+    "Kiran": [70, 75, 72, 68, 74]
+}
+
+total_marks = {}
+
+
+for student, marks in student_marks.items():
+
+    total_marks[student] = sum(marks)
+
+
+topper = max(total_marks, key=total_marks.get)
+
+
+print("Total Marks of Each Student:")
+
+for student, total in total_marks.items():
+
+    print(student, ":", total)
+
+print("\nTopper:")
+
+print(topper, "with total marks =", total_marks[topper])
+
 
 ## OUTPUT
+Total Marks of Each Student:
+
+Ravi : 442
+
+Arun : 400
+
+Meena : 457
+
+Kiran : 359
+
+Topper:
+
+Meena with total marks = 457
 
 ## RESULT
+The program successfully calculates the total marks of each student and identifies Meena as the topper with the highest score of 457 marks.
